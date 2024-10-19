@@ -1,100 +1,46 @@
 import Image from "next/image";
+import Header from "./components/Header";
+import { CiMedicalCase } from "react-icons/ci";
+import { LiaAmbulanceSolid } from "react-icons/lia";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div >
+      <main className="flex flex-col  bg-rose-50 p-3 space-y-12">
+        <Header/>
+        <div className=" flex justify-between p-4">
+        <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" width="100"  className=" ring-1  ring-neutral-700 h-[100px] rounded-full shadow-white"/>
+       <span className=" text-8xl font-sans"> <h1 className=" flex">Swift care<CiMedicalCase className="text-red-500"/></h1><h1 className=" p-2 mx-3 flex space-x-4">< LiaAmbulanceSolid className="text-red-500  "/>smart routes.</h1></span>
+       <div className="p-7 rounded-2xl grid justify-evenly space-y-7  ring-1 ring-neutral-800">
+<span className=" text-5xl font-serif flex flex-col  "> Emergency <h1 className=" text-red-700"> Window</h1></span>
+<p className=" text-xl font-serif">Skip the Line</p>
+<p className=" text-xl font-semibold" >Book an appointment within 2 minutes</p>
+<button className=" bg-red-600 text-white font-bold  p-4 rounded-xl">Book Now</button>
+       </div></div>
+       <div className=" flex justify-around">
+       <div className="p-7 rounded-2xl grid justify-evenly space-y-7 bg-neutral-100 bg-opacity-20 ring-1 ring-neutral-800 w-full">
+<span className=" text-5xl font-semibold flex flex-col  "> Book <h1 className=" text-red-700"> OPD now</h1></span>
+<input className="  p-2 rounded-2xl ring-1 font-serif text-2xl ring-black "/>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+<p className=" text-xl font-semibold" >Book an appointment within 2 minutes</p>
+<button className=" bg-red-600 text-white font-bold  p-4 rounded-xl">Book Now</button>
+       </div>
+       <div className=" grid justify-evenly bg-white  bg-opacity-25 ">
+      <h1 className=" text-red-700 font-semibold text-7xl text-center">
+        2300+
+      </h1>
+      <h3 className=" text-xl font-sans text-black text-center">Registered OPD</h3>
+      <h1 className=" text-red-700 font-semibold text-7xl text-center">
+     13000+
+      </h1 >
+      <h3 className=" text-xl font-sans text-black text-center">Registered Patients</h3></div>
+       </div>
+     
+       
+    
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+       
       </footer>
     </div>
   );
