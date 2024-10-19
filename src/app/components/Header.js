@@ -12,7 +12,7 @@ export default function Header() {
       <Link href="/" className=' p-2 text-lg'>about</Link>
       <Link href="/" className='p-2 text-lg'>services</Link>
       <Link href="/" className='p-2 text-lg ring-1 rounded-3xl w-40 text-center ring-neutral-900'>contact  <span class="relative inline-flex rounded-full h-2 w-2 bg-red-300"></span><span class="fixed flex h-3 w-3">
-  <span class="animate-ping fixed inline-flex h-full w-full rounded-full bg-red-300 opacity-75"> </span>
+  <span class="animate-ping fixed inline-flex h-full w-full rounded-full z-10 bg-red-300 opacity-75"> </span>
 
 </span></Link></div>
     </div>
