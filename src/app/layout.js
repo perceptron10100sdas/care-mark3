@@ -11,6 +11,11 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const poppinsBold = localFont({
+  src: "./fonts/Poppins-Bold.ttf",
+  variable: "--font-poppins-bold",
+  weight: "100 900",
+});
 
 export const metadata = {
   title: "Create Next App",
