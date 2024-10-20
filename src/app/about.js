@@ -8,7 +8,7 @@ import { FaUserDoctor } from "react-icons/fa6";
 export default function Home() {
   return (
     <div>
-      <main className="flex flex-col bg-rose-50 p-3 space-y-12 pb-12">
+      <main className="flex flex-col bg-rose-50 p-3 space-y-12">
         <Header />
         <div className="flex justify-between p-4">
           <img
@@ -186,16 +186,18 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className="bg-rose-50 rounded-lg shadow border-t">
-        <div className="w-full mx-auto p-4 md:flex md:items-center md:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center ">
-            © 2024{" "}
+      {/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer> */}
+
+      <footer className="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+        <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            © 2023{" "}
             <a href="https://flowbite.com/" className="hover:underline">
-              Medicate
+              Flowbite™
             </a>
             . All Rights Reserved.
           </span>
-          <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
+          <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
             <li>
               <a href="#" className="hover:underline me-4 md:me-6">
                 About
