@@ -10,6 +10,7 @@ import { Router } from "next/router";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
 
   return (
     <div>
@@ -23,13 +24,13 @@ export default function Home() {
           /> */}
           <span className="text-8xl font-sans">
             {" "}
-            <h1 className=" flex">
-              Swift care
-              <CiMedicalCase className="text-red-500" />
+            <h1 className="flex gap-x-2">
+              <p>Swift care</p>
+              <CiMedicalCase className="text-red-500 relative top-2" />
             </h1>
             <h1 className=" p-2 mx-3 flex space-x-4">
               <LiaAmbulanceSolid className="text-red-500" />
-              smart routes.
+              <p className="text-7xl">Smart routes.</p>
             </h1>
           </span>
           <div className="p-7 rounded-2xl grid justify-evenly space-y-7  ring-1 ring-neutral-800">
@@ -41,7 +42,7 @@ export default function Home() {
             <p className=" text-xl font-semibold">
               Book an appointment within 2 minutes
             </p>
-            <button className=" bg-red-600 text-white font-bold p-4 rounded-xl" onClick={() => useRouter().push("/emergency")}>
+            <button className=" bg-red-600 text-white font-bold p-4 rounded-xl" onClick={() => router.push("/emergency")}>
               Book Now
             </button>
           </div>
@@ -106,7 +107,7 @@ export default function Home() {
             <p className=" text-xl font-semibold">
               Book an appointment within 2 minutes
             </p>
-            <button className=" bg-red-600 text-white font-bold  p-4 rounded-xl">
+            <button className=" bg-red-600 text-white font-bold  p-4 rounded-xl" onClick={() => router.push("/beds")}>
               Book Now
             </button>
           </div>
@@ -175,7 +176,7 @@ export default function Home() {
             <p className=" text-xl font-semibold z-20">
               Book an appointment within 2 minutes
             </p>
-            <button className=" bg-red-600 text-white font-bold  p-4 rounded-xl">
+            <button className=" bg-red-600 text-white font-bold  p-4 rounded-xl" onClick={() => router.push("/ambulance")}>
               Book Now
             </button>
           </div>

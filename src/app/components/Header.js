@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -25,8 +25,8 @@ export default function Header() {
         <Link href="/beds" className=" p-2 text-lg">
           beds
         </Link>
-        <Link href="/" className="p-2 text-lg">
-          services
+        <Link href="/ambulance" className="p-2 text-lg">
+          ambulance
         </Link>
         <Link href="/emergency" className="p-2 text-lg">
           emergency

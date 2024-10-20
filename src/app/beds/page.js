@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import HospitalMap from "./show-hospital";
 
 export default function BookingForm() {
   const [selectedHospital, setSelectedHospital] = useState(null);
@@ -100,103 +101,92 @@ export default function BookingForm() {
   return (
     <div>
       <Header />
-      <div className="p-8 bg-gray-50 min-h-screen">
-        {/* Form Section */}
-        <div className="max-w-lg mx-auto bg-white p-6 shadow-lg rounded-xl">
-          <h1 className="text-3xl font-bold text-red-600 mb-4">Book a Bed</h1>
-          <form id="bookingForm" onSubmit={handleSubmit}>
-            <div className="mb-4">
-              <label htmlFor="phone" className="block font-semibold">
-                Phone Number:
-              </label>
-              <input
-                type="text"
-                id="phone"
-                name="phone"
-                value={formValues.phone}
-                onChange={handleInputChange}
-                className="w-full border-2 p-2 rounded-lg mt-2"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="uid" className="block font-semibold">
-                UID:
-              </label>
-              <input
-                type="text"
-                id="uid"
-                name="uid"
-                value={formValues.uid}
-                onChange={handleInputChange}
-                className="w-full border-2 p-2 rounded-lg mt-2"
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label htmlFor="bedType" className="block font-semibold">
-                Bed Type:
-              </label>
-              <select
-                id="bedType"
-                name="bedType"
-                value={formValues.bedType}
-                onChange={handleInputChange}
-                className="w-full border-2 p-2 rounded-lg mt-2"
-                required
+      <div className="p-8 bg-rose-50 w-full flex flex-row-reverse gap-x-8">
+        <div className="w-full">
+          {/* Form Section */}
+          <div className="w-full mx-auto bg-white p-6 shadow-lg rounded-xl">
+            <h1 className="text-3xl font-bold text-red-600 mb-4">Book a Bed</h1>
+            <form id="bookingForm" onSubmit={handleSubmit}>
+              <div className="mb-4">
+                <label htmlFor="phone" className="block font-semibold">
+                  Phone Number:
+                </label>
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  value={formValues.phone}
+                  onChange={handleInputChange}
+                  className="w-full border-2 p-2 rounded-lg mt-2"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="uid" className="block font-semibold">
+                  UID:
+                </label>
+                <input
+                  type="text"
+                  id="uid"
+                  name="uid"
+                  value={formValues.uid}
+                  onChange={handleInputChange}
+                  className="w-full border-2 p-2 rounded-lg mt-2"
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="bedType" className="block font-semibold">
+                  Bed Type:
+                </label>
+                <select
+                  id="bedType"
+                  name="bedType"
+                  value={formValues.bedType}
+                  onChange={handleInputChange}
+                  className="w-full border-2 px-4 py-2 rounded-lg mt-2"
+                  required
+                >
+                  <option value="">Select Bed Type</option>
+                  <option value="general">General</option>
+                  <option value="surgery">Surgery</option>
+                </select>
+              </div>
+              <button
+                type="submit"
+                className={`w-full bg-red-600 text-white p-2 rounded-lg mt-4 ${
+                  isButtonDisabled ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+                disabled={isButtonDisabled}
               >
-                <option value="">Select Bed Type</option>
-                <option value="general">General</option>
-                <option value="surgery">Surgery</option>
-              </select>
-            </div>
-            <button
-              type="submit"
-              className={`w-full bg-red-600 text-white p-2 rounded-lg mt-4 ${
-                isButtonDisabled ? "opacity-50 cursor-not-allowed" : ""
-              }`}
-              disabled={isButtonDisabled}
-            >
-              {isButtonDisabled ? "All beds are filled" : "Book Bed"}
-            </button>
-          </form>
-        </div>
+                {isButtonDisabled ? "All beds are filled" : "Book Bed"}
+              </button>
+            </form>
+          </div>
 
-        {/* Bed Availability Section */}
-        <div className="max-w-lg mx-auto mt-6 p-6 bg-white shadow-lg rounded-xl">
-          <h2 className="text-2xl font-semibold mb-4">Bed Availability</h2>
-          <div className="space-y-2">
-            <p className="font-medium">
-              General Beds:{" "}
-              <span id="generalAvailable">
-                {generalBeds.available}/{generalBeds.total}
-              </span>
-            </p>
-            <p className="font-medium">
-              Surgery Beds:{" "}
-              <span id="surgeryAvailable">
-                {surgeryBeds.available}/{surgeryBeds.total}
-              </span>
-            </p>
+          {/* Bed Availability Section */}
+          <div className="w-full mx-auto mt-6 p-6 bg-white shadow-lg rounded-xl">
+            <h2 className="text-2xl font-semibold mb-4">Bed Availability</h2>
+            <div className="space-y-2">
+              <p className="font-medium">
+                General Beds:{" "}
+                <span id="generalAvailable">
+                  {generalBeds.available}/{generalBeds.total}
+                </span>
+              </p>
+              <p className="font-medium">
+                Surgery Beds:{" "}
+                <span id="surgeryAvailable">
+                  {surgeryBeds.available}/{surgeryBeds.total}
+                </span>
+              </p>
+            </div>
           </div>
         </div>
 
         {/* Hospital Map Section */}
-        <div className="max-w-lg mx-auto mt-6 p-6 bg-white shadow-lg rounded-xl">
-          <h2 className="text-2xl font-semibold mb-4">Selected Hospital</h2>
-          <p id="selectedHospitalText" className="text-lg">
-            {selectedHospital ? selectedHospital.name : "No hospital selected"}
-          </p>
-          <div id="hospitalMap" className="mt-4">
-            {selectedHospital && (
-              <iframe
-                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBGLpuDsXyK3prGYgAeFCal8x0Dalo7FZ0&q=${selectedHospital.latitude},${selectedHospital.longitude}&zoom=16`}
-                width="100%"
-                height="300"
-                allowFullScreen
-              ></iframe>
-            )}
-          </div>
+        <div className="w-full mx-auto mt-6 p-6 bg-white shadow-lg rounded-xl">
+          <HospitalMap hospital={exampleHospital} />
         </div>
       </div>
       <Footer />
