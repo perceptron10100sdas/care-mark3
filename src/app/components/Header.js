@@ -22,6 +22,9 @@ export default function Header() {
         <Link href="/about" className=" p-2 text-lg">
           about
         </Link>
+        <Link href="/beds" className=" p-2 text-lg">
+          beds
+        </Link>
         <Link href="/" className="p-2 text-lg">
           services
         </Link>

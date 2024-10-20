@@ -41,7 +41,7 @@ export default function Home() {
             <p className=" text-xl font-semibold">
               Book an appointment within 2 minutes
             </p>
-            <button className=" bg-red-600 text-white font-bold p-4 rounded-xl" onClick={useRouter().push("/emergency")}>
+            <button className=" bg-red-600 text-white font-bold p-4 rounded-xl" onClick={() => useRouter().push("/emergency")}>
               Book Now
             </button>
           </div>
