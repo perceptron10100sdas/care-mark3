@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## MediCate - Emergency Healthcare Management System
+MediCate is a comprehensive healthcare management system that streamlines emergency services, hospital bed management, and ambulance coordination.
 
-## Getting Started
+### **Features**
+- **Emergency Services**
+  - Real-time emergency case management
+  - Quick access to nearby hospitals
+  - Instant hospital capacity information
+  - Emergency contact coordination
+- **Bed Management**
+  - Live bed availability tracking
+  - Automated bed allocation system
+  - Patient transfer management
+  - Real-time updates on bed status
+- **Ambulance Services**
+  - GPS-based ambulance tracking
+  - Smart route optimization
+  - Real-time driver coordination
+  - Fare estimation based on distance
 
-First, run the development server:
+### **Tech Stack**
+- [Next.js](https://nextjs.org/) - React framework for production
+- [React](https://reactjs.org/) - Frontend library
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Google Maps API](https://developers.google.com/maps) - Location and routing services
+- [React Icons](https://react-icons.github.io/react-icons/) - Icon components
 
+### **Project Structure**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+medicate/
+├── src/
+│   └── app/
+│       ├── about/           
+│       │   └── page.js
+│       ├── ambulance/          
+│       │   ├── page.js
+│       │   └── components/
+│       ├── beds/              
+│       │   ├── page.js
+│       │   └── components/
+│       ├── emergency/         
+│       │   ├── page.js
+│       │   └── components/
+│       ├── components/        
+│       │   ├── Header.js
+│       │   ├── Footer.js
+│       │   └── Layout.js
+│       ├── lib/              
+│       │   └── api.js
+│       ├── styles/           
+│       │   └── globals.css
+│       ├── layout.js        
+│       └── page.js          
+├── public/                  
+│   ├── images/
+│   └── icons/
+├── .env.local              
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **Getting Started**
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/medicate.git
+    ```
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+3. Set up environment variables: Create a .env.local file with your Google Maps API key:
+    ```md
+    NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_api_key_here
+    ```
+4. Run the development server:
+    ```bash
+    npm run dev
+    ```
+5. Open http://localhost:3000 in your browser
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### **Key Components**
+- **Emergency Dashboard:** Quick access to emergency services and nearby hospitals
+- **Bed Management System:** Real-time bed availability tracking and booking
+- **Ambulance Booking:** Location-based ambulance services with route optimization
+- **Hospital Interface:** Dashboard for hospital staff to manage resources
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### **Acknowledgments**
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [Google Maps Platform](https://developers.google.com/maps/documentation)
 
-## Learn More
+<div align="center">
+    <h3>Developed by The Outbreakers</h3>
+</div>
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
