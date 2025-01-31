@@ -12,7 +12,7 @@ const HospitalMap = ({ hospital }) => {
 
   // Function to generate the Google Maps embed URL
   const getMapUrl = (lat, lng) => {
-    const apiKey = 'AIzaSyBGLpuDsXyK3prGYgAeFCal8x0Dalo7FZ0'; // Replace with your actual Google Maps API key
+    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
     return `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${lat},${lng}&zoom=16`;
   };
 
