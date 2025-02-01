@@ -1,6 +1,25 @@
 ## MediCate - Emergency Healthcare Management System
 MediCate is a comprehensive healthcare management system that streamlines emergency services, hospital bed management, and ambulance coordination.
 
+### **How it all Started?**
+Originally developed for **HackOdisha 4.0** (2024), Medicate is an enhanced version of the **CareSetu** project, featuring a more intuitive UI and UX for a seamless user experience. With a focus on accessibility, real-time data, and efficiency, we aim to simplify healthcare services and ensure faster medical assistance when it’s needed most.
+
+The idea for Medicate was driven by the need for a more efficient and accessible healthcare management system. We aimed to create a platform where users can locate nearby hospitals using GPS, check real-time bed availability, book OPDs and beds across different hospitals, and even find ambulances for inter-hospital emergency transfers—all in one place.
+
+### **Meet the Team**
+
+- **Adarsh Swain** – **Project Lead**  
+  Led the ideation & execution of Medicate, integrating Google Maps API for location-based hospital searches, ensuring smooth feature integration.   
+
+- **Swayam Subhankar Sahoo** – **Front-End & UI/UX**  
+  Designed the intuitive user interface and optimized the user experience, focusing on front-end development to create responsive, engaging layouts.  
+
+- **Sambhav Das** – **Front-End & UI/UX**  
+  Worked on architecture and design, ensuring seamless integration of features and enhancing the overall user interface.  
+
+- **Anshuman Pattnaik** – **Presenter & Designer**  
+  Developed and presented the project, effectively showcasing key features to the audience .
+
 ### **Features**
 - **Emergency Services**
   - Real-time emergency case management
